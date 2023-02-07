@@ -629,6 +629,10 @@ img {
 }
 
 .footer-input {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   height: 40px;
   width: 100%;
   margin-right: 24px;
@@ -637,6 +641,17 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding-left: 16px;
+  transition-property: border, background;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}
+
+.footer-input:hover,
+.footer-input:active {
+  border: 1px solid #4d5ae5;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #2e2f42;
 }
 
 .footer-input::placeholder {
@@ -646,6 +661,13 @@ img {
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}
+
+.footer-input:hover::placeholder,
+.footer-input:active::placeholder {
 }
 
 .footer-btn {
@@ -662,12 +684,26 @@ img {
   font-size: 16px;
   line-height: 1.5;
   color: #ffffff;
+  transition-property: background, box-shadow, transform;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+  background: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-btn:active {
+  transform: scale(0.8);
 }
 /* Poryfolio */ /* Poryfolio */ /* Poryfolio */
 
 .Portf-list {
   list-style-type: none;
 }
+
 .text-port {
   font-style: normal;
   font-size: 16px;
@@ -913,6 +949,9 @@ img {
   display: flex;
   align-items: center;
   position: relative;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
 }
 
 .modal-title {
@@ -923,6 +962,8 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-top: 32px;
+}
+.modal-forms {
 }
 
 .modal-list {
@@ -937,11 +978,27 @@ img {
 
 .modal-input {
   width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 38px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}
+
+.modal-input:not(:placeholder-shown):valid {
+  background-color: #31d0aa;
+}
+
+.modal-input:not(:placeholder-shown):invalid {
+  background-color: #ca1322;
 }
 
 .modal-icon {
@@ -984,15 +1041,19 @@ img {
   border-radius: 4px;
   border: none;
   padding: 16px 32px;
+  transition-property: background, box-shadow, transform;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
 }
 
-.modal-checkbox {
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: #757575;
-  margin-top: 10px;
-  margin-bottom: 24px;
+.modal-btn:hover,
+.modal-btn:focus {
+  background: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-btn:active {
+  transform: scale(0.8);
 }
 
 .modal-btn-cont {
@@ -1003,4 +1064,17 @@ img {
 
 .text-btn {
   width: 105px;
+}
+
+.modal-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  gap: 8px;
 }
